@@ -6,8 +6,8 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [Requirements For Initial Setup](#requirements)
 * [Setup](#setup)
-* [Room for Improvement](#room-for-improvement)
 * [Contact](#contact)
 
 
@@ -17,32 +17,34 @@
 - Every user can participate and participation fee(price of ticket) is based on Chainlink Data price aggregator of ETH/USD price
 - After owner end lottery, the winner will be picked using randomness from Chainlink VRFv2 Coordinator
 
-
-
+ 
 ## Technologies Used
 - Chainlink Data Feed Aggregator
 - Chainlink VRFv2
-- Truffle
-
 
 ## Features
 - Trully random contract(Ideally for lottery)
-- Price required for participate is not based on cryptocurrencies prices(constant 50$)
+- Ticket price is based on ETH/USD prices
 - The contract has been properly reviewed.
 
-
+## Requirements For Initial Setup
+- Install [NodeJS](https://nodejs.org/en/), should work with any node version below 16.16.0
+- Install [Hardhat](https://hardhat.org/)
 
 ## Setup
-
-Just run "npm install" to install all dependencies and you will be able to run tests and test by yourself
+### 1. Clone/Download the Repository
+### 2. Install Dependencies:
 ```
-npm install
+$ cd lottery_file
+$ npm install
 ```
+### 3. Run Tests
+`$ npx hardhat test`
 
+### 3. Migrate to Rinkeby
+`$ npx hardhat run scripts/deploy.js --network rinkeby
+`
 
-## Room for Improvement
-- User friendly UI
-- Marketing
 
 
 ## Contact
