@@ -188,3 +188,4 @@ contract Lottery is VRFConsumerBaseV2, Ownable {
     emit ParticipationFeeUpdated(usdParticipationFee);
   }
 }
+
