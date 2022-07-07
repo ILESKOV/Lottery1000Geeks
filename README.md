@@ -38,10 +38,12 @@
 $ cd lottery_file
 $ npm install
 ```
-### 3. Run Tests
+### 3. In the secret.json file, enter your URL of the provider and private key instead of "x":
+
+### 4. Run Tests
 `$ npx hardhat test`
 
-### 3. Migrate to Rinkeby
+### 5. Migrate to Rinkeby
 `$ npx hardhat run scripts/deploy.js --network rinkeby
 `
 
