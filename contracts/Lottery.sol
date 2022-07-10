@@ -76,7 +76,7 @@ contract Lottery is VRFConsumerBaseV2, Ownable {
     randomWord = new uint256[](0);
   }
 
-  /// @notice ticket price is always $50 and fee of ETH is based on actual ETH/USD price
+  /// @notice ticket price is based on actual ETH/USD price
   /// @dev Function use data feed aggregator from Chainlink
   function participate() public payable {
     require(
@@ -89,7 +89,7 @@ contract Lottery is VRFConsumerBaseV2, Ownable {
     emit NewParticipant(msg.sender, lotteryId);
   }
 
-  /// @notice The price is calculated in ETH and it's always 50$.
+  /// @notice The price is calculated in ETH
   /// @dev Function use data feed aggregator from Chainlink
   /// @return Cost in ETH equivalent to 50$
   function getParticipationFee() public view returns (uint256) {
