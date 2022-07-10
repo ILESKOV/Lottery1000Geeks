@@ -84,7 +84,6 @@ contract Lottery is VRFConsumerBaseV2, Ownable {
       "Not Enough ETH to participate!"
     );
     require(lotteryState == LOTTERY_STATE.OPEN, "Wait until the next lottery");
-    emit LotteryStateChanged(lotteryState);
     numberOfTicket++;
     userTickets[numberOfTicket] = payable(msg.sender);
     emit NewParticipant(msg.sender, lotteryId);
